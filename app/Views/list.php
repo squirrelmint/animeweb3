@@ -113,9 +113,13 @@
 ?>
 <script>
   $(document).ready(function() {
-    var track_click = 1; //track user click on "load more" button, righ now it is 0 click
+    var track_click = 2; //track user click on "load more" button, righ now it is 0 click
     var total_pages = '<?= $pagination['total_page'] ?>';
-    var keyword = '<?= $keyword ?>';
+    var keyword = '<?php if(!empty($keyword)){
+      echo $keyword;
+    }else{
+      echo '';
+    }  ?>';
 
     if( track_click == total_pages ){
       $("#anime-loadmore").hide(0);

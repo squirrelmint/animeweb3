@@ -43,9 +43,10 @@
                   if($ep_index==$key){
                     $active = 'active';
                   }
+                  $url_nameep = urlencode(str_replace(' ', '-', $val['NameEp']))
               ?>
                 <div class="swiper-slide">
-                  <a onclick="goView('<?= ($data_anime['movie_id']) ?>','<?= $url_name ?>','<?= $key ?> ')" tabindex="-1">
+                  <a onclick="goView('<?= ($data_anime['movie_id']) ?>','<?= urldecode($url_name) ?>','<?= $key ?>','<?= $url_nameep ?>')" tabindex="-1">
                     <img src="<?= $movie_picture ?>">
                     <span class="<?=$active?>"><?= $val['NameEp'] ?></span>
                   </a>
@@ -77,7 +78,7 @@
           </div>
           <div class="anime-date">
           <span> <?= $DateEng['m'].' '. $DateEng['d'].', '.$DateEng['Y'] ?></span>
-            <span>EPISODES : <?= $ep_index + 1 ?></span>
+            <span>EPISODES : <?= $data_anime['ep_data'][$ep_index]['NameEp']?></span>
           </div>
           <div class="anime-description">
             <p>

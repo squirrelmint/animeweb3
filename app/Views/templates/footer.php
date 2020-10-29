@@ -8,55 +8,76 @@
         </div>
       </div>
     </footer>
-  </div>
+    </div>
 
-  <script>
-    $(document).ready(function() {
+    <script>
+      $(document).ready(function() {
 
-      var mySwiper = new Swiper('#HomeSlide', {
-        loop: true,
-        speed: 800,
-        spaceBetween: 100,
-        effect: 'fade',
+        var mySwiper = new Swiper('#HomeSlide', {
+          loop: true,
+          speed: 800,
+          spaceBetween: 100,
+          effect: 'fade',
 
-        // Slide auto play
-        autoplay: {
-          delay: 5000,
-        },
+          // Slide auto play
+          autoplay: {
+            delay: 5000,
+          },
 
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      })
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        })
 
-    });
+      });
 
-    function goView(id, name , ep) {
-    
-      window.location.href = "/anime/" + id + '/' + name + '/' + ep;
-    }
+      function goView(id, name, ep, nameep) {
+        countView(id);
 
-    
+        window.location.href = "/anime/" + id + '/' + name + '/' + ep + '/' + nameep;
 
-    function goCate(id, name) {
 
-      window.location.href = "/category/" + id + '/' + name ;
-    }
-    /* Set the width of the side navigation to 0 */
-    /* Set the width of the side navigation to 250px */
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "100%";
-      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-    }
+      }
 
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-    }
-    
-  </script>
+      function countView(id) {
+        // alert(id);
+        var base_url = '<?= base_url() ?>';
+        $.ajax({
 
-  </body>
+          url: base_url + "/countview/" + id,
+          method: "GET",
 
-  </html>
+          async: true,
+
+          success: function(response) {
+
+            console.log(response); // server response
+
+          }
+
+
+        });
+
+      }
+
+      function goCate(id, name) {
+
+        window.location.href = "/category/" + id + '/' + name;
+      }
+      /* Set the width of the side navigation to 0 */
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+
+    </body>
+
+    </html>

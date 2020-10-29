@@ -41,8 +41,8 @@
     <a class="navbar-brand" href="#">
       <img class="logo" src="<?= base_url().'/public/logo/Logo-Anime-8k-1.png' ?> ">
     </a>
-    <a href="#">HOME</a>
-    <a href="#">ANIME LIST</a>
+    <a href="<?php echo base_url() ?>">HOME</a>
+    <a href="<?php echo base_url().'/all_manga/' ?>">ANIME LIST</a>
     <a href="#">SUB-THAI</a>
     <a href="#">SOUND-THAI</a>
     <a href="#">TOP 1-10</a>
