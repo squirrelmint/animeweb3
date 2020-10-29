@@ -1432,6 +1432,7 @@ ul.list-anime > li div.title-in .anime-score span.score {
 .sidenav .navbar-brand {
   text-align: center;
   padding-bottom: 60px;
+  margin-left: 0px;
 }
 
 .sidenav a.navbar-brand:hover,
