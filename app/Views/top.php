@@ -20,27 +20,14 @@
 <!-- Icons Grid -->
 <section class="text-center">
   <div class="container">
-    <div id="anime-list" class="row">
+    <div id="anime-top" class="row">
       <div class="col-md-12">
-        <div class="anime-bg-title text-white">
-          <?php
-          if (!empty($cate_name)) {
-          ?>
-            <h1 class="anime-title">หมวดหมู่ : <?= $cate_name ?></h1>
-
-          <?php
-          } else if (!empty($keyword)) {
-          ?>
-
-            <h1 class="anime-title">คุณกำลังค้นหา : <?= $keyword ?> </h1>
-          <?php
-          }
-          ?>
-        </div>
+        <h1 class="anime-title-top">Top 1 - 10 </h1>
 
         <ul id="list-anime" class="list-anime">
 
           <?PHP
+          $i=1;
           if ($list_anime) {
             foreach ($list_anime as $val) {
 
@@ -64,12 +51,13 @@
                   </a>
                 </div>
                 <div class="title-in">
+                  <div class="anime-top">Top <?=$i?></div>
                   <h2>
                     <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0')" tabindex="-1"><?= $val['movie_thname'] ?></a>
                   </h2>
                 </div>
               </li>
-            <?php  }
+            <?php $i++;  }
           } else {
             ?>
 
@@ -80,13 +68,7 @@
 
 
         </ul>
-        <?php
-        if ($list_anime) {
-        ?>
-          <button id="anime-loadmore">NEXT</button>
-        <?php
-        }
-        ?>
+
       </div>
     </div>
   </div>
@@ -97,7 +79,7 @@
   if ($value['ads_position'] == "2") {
 ?>
 
-<section id="anime-banners" class="text-center">
+<section id="anime-banners" class="bg-light text-center">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-lg-12 ">

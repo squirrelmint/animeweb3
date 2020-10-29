@@ -2,7 +2,7 @@
   if ($value['ads_position'] == "1") {
 ?>
 
-    <section id="anime-banners" class="bg-light text-center">
+    <section id="anime-banners" class="text-center">
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-lg-12 ">
@@ -16,20 +16,26 @@
   }
 }
 ?>
+
+<?php 
+  if (substr($data_anime['movie_picture'], 0, 4) == 'http') {
+    $movie_picture = $data_anime['movie_picture'];
+  } else {
+    $movie_picture = $path_thumbnail . $data_anime['movie_picture'];
+  }
+  $url_name = urlencode(str_replace(' ', '-', $data_anime['movie_thname']))
+?>
+
+<section id="anime-poster">
+  <div class="anime-poster">
+    <img src="<?= $movie_picture ?>">
+  </div>
+</section>
+
 <!-- Icons Grid -->
 <section id="anime-video" class="text-center">
   <div class="container">
     <div class="row">
-      
-      <?php 
-        if (substr($data_anime['movie_picture'], 0, 4) == 'http') {
-          $movie_picture = $data_anime['movie_picture'];
-        } else {
-          $movie_picture = $path_thumbnail . $data_anime['movie_picture'];
-        }
-        $url_name = urlencode(str_replace(' ', '-', $data_anime['movie_thname']))
-      ?>
-
       <h1 class="anime-title text-white"><?= $data_anime['movie_thname'] ?> ตอนที่ 1</h1>
       <div id="anime-player">
         <iframe id="player" class="player" src="<?= base_url('player/' . $data_anime['movie_id'] . '/' . $ep_index) ?>" scrolling="no" frameborder="0" allowfullscreen="yes"></iframe>
@@ -62,23 +68,8 @@
       </div>
 
       <div id="anime-detail">
-        <div class="anime-poster">
-          <img src="<?= $movie_picture ?>">
-        </div>
         <div class="anime-card-detail">
-          <div class="anime-category">
-            <?php foreach ($data_anime['cate_data'] as $val) { ?>
-              <a href="<?php echo base_url().'/category/'.$val['category_id'].'/'.$val['category_name'] ?>" target="_blank">
-                <span class="cate-name"><?= $val['category_name'] ?></span>
-              </a>
-
-            <?php } ?>
-
-          </div>
-          <div class="anime-date">
-          <span> <?= $DateEng['m'].' '. $DateEng['d'].', '.$DateEng['Y'] ?></span>
-            <span>EPISODES : <?= $ep_index + 1 ?></span>
-          </div>
+          <h3 class="anime-title-description">เรื่องย่อ</h3>
           <div class="anime-description">
             <p>
               <?= $data_anime['movie_des'] ?>
@@ -86,8 +77,10 @@
             <div class="anime-score">
               <span>SCORE</span>
               <?= $data_anime['movie_ratescore'] ?>
-
             </div>
+          </div>
+          <div class="anime-category">
+            หมวดหมู่: Action, Adventure
           </div>
         </div>
       </div>
@@ -100,7 +93,7 @@
   if ($value['ads_position'] == "2") {
 ?>
 
-    <section id="anime-banners" class="bg-light text-center">
+    <section id="anime-banners" class="text-center">
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-lg-12 ">
@@ -122,7 +115,7 @@
       spaceBetween: 100,
       slidesPerView: 4,
       spaceBetween: 30,
-      centeredSlides: true,
+      centeredSlides: false,
       initialSlide: '<?=$ep_index?>',
 
       // Navigation arrows

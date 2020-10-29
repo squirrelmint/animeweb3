@@ -222,9 +222,9 @@ class Home extends BaseController
 			'list_category' => $list_category,
 			'list_anime' => $list_anime,
 			'cate_id' => $cate_id,
-
 			'chk_act' => $chk_act,
 		];
+
 		$body_data = [
 			'cate_name' => urldecode($cate_name),
 			'keyword' => $cate_id,
@@ -237,7 +237,7 @@ class Home extends BaseController
 
 		];
 		echo view('templates/header.php', $header_data);
-		echo view('list.php', $body_data);
+		echo view('top.php', $body_data);
 		echo view('templates/footer.php');
 	}
 

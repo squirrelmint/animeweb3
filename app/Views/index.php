@@ -51,7 +51,7 @@
     if ($value['ads_position'] == "1") {
   ?>
 
-      <section id="anime-banners" class="bg-light text-center">
+      <section id="anime-banners" class="text-center">
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-lg-12 ">
@@ -190,7 +190,7 @@
     if ($value['ads_position'] == "2") {
   ?>
 
-      <section id="anime-banners" class="bg-light text-center">
+      <section id="anime-banners" class="text-center">
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-lg-12 ">
