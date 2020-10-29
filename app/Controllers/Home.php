@@ -253,9 +253,12 @@ class Home extends BaseController
 
 			'cate_id' => $cate_id,
 			'ads' => $ads,
+			'list_anime' => $list_anime,
+			'cate_id' => $cate_id,
 			'chk_act' => $chk_act,
 			'path_ads' => $this->path_ads,
 		];
+
 		$body_data = [
 			'cate_name' => urldecode($cate_name),
 			'keyword' => $cate_id,
@@ -265,7 +268,7 @@ class Home extends BaseController
 			'pagination' => $pagination,
 		];
 		echo view('templates/header.php', $header_data);
-		echo view('list.php', $body_data);
+		echo view('top.php', $body_data);
 		echo view('templates/footer.php');
 	}
 
