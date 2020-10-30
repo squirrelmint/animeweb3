@@ -1,0 +1,51 @@
+CRITICAL - 2020-10-30 00:59:11 --> Undefined index: epName
+#0 C:\xampp\htdocs\animeweb3\app\Views\index.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 23, Array)
+#1 C:\xampp\htdocs\animeweb3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\animeweb3\system\Common.php(1071): CodeIgniter\View\View->render('index.php', Array, true)
+#3 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(73): view('index.php', Array)
+#4 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-30 01:42:23 --> Too few arguments to function App\Controllers\Home::top10(), 0 passed in C:\xampp\htdocs\animeweb3\system\CodeIgniter.php on line 910 and exactly 2 expected
+#0 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->top10()
+#1 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-30 02:33:30 --> Undefined index: list
+#0 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(279): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 279, Array)
+#1 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->top10()
+#2 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-30 02:34:59 --> Undefined variable: pagination
+#0 C:\xampp\htdocs\animeweb3\app\Views\top.php(99): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 99, Array)
+#1 C:\xampp\htdocs\animeweb3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\animeweb3\system\Common.php(1071): CodeIgniter\View\View->render('top.php', Array, true)
+#3 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(305): view('top.php', Array)
+#4 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->top10()
+#5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-30 02:37:16 --> Undefined variable: pagination
+#0 C:\xampp\htdocs\animeweb3\app\Views\top.php(99): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 99, Array)
+#1 C:\xampp\htdocs\animeweb3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\animeweb3\system\Common.php(1071): CodeIgniter\View\View->render('top.php', Array, true)
+#3 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(305): view('top.php', Array)
+#4 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->top10()
+#5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-30 05:16:00 --> syntax error, unexpected ')', expecting ';' or ','
+#0 C:\xampp\htdocs\animeweb3\system\Common.php(1071): CodeIgniter\View\View->render('index.php', Array, true)
+#1 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(73): view('index.php', Array)
+#2 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}

@@ -121,7 +121,7 @@
       echo '';
     }  ?>';
 
-    if( track_click == total_pages ){
+    if( track_click >= total_pages ){
       $("#anime-loadmore").hide(0);
     }
 

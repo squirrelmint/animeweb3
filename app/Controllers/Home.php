@@ -31,9 +31,7 @@ class Home extends BaseController
 
 	public function index()
 	{
-		$popular_anime = $this->VideoModel->get_popular($this->branch);
-		// echo '<pre>' . print_r($popular_anime, true) . '</pre>';
-		// die;
+		$popular_anime = $this->VideoModel->get_popular($this->branch,4);
 		$slide_anime = $this->VideoModel->get_slide($this->branch);
 		$pagination = $this->VideoModel->get_list_video($this->branch);
 		foreach ($pagination['list'] as $val) {
@@ -42,7 +40,8 @@ class Home extends BaseController
 		$ads = $this->VideoModel->get_path_imgads($this->branch);
 		$list_category = $this->VideoModel->get_category($this->branch);
 		$date = get_date($slide_anime[0]['movie_create']);
-
+		// echo '<pre>' . print_r($slide_anime, true) . '</pre>';
+		// die;
 		$chk_act = [
 			'home' => 'active',
 			'subthai' => '',
@@ -250,7 +249,6 @@ class Home extends BaseController
 		$header_data = [
 			'document_root' => $this->document_root,
 			'list_category' => $list_category,
-
 			'cate_id' => $cate_id,
 			'ads' => $ads,
 			'list_anime' => $list_anime,
@@ -266,6 +264,42 @@ class Home extends BaseController
 			'path_thumbnail' => $this->path_thumbnail,
 			'list_anime' => $list_anime,
 			'pagination' => $pagination,
+		];
+		echo view('templates/header.php', $header_data);
+		echo view('list.php', $body_data);
+		echo view('templates/footer.php');
+	}
+
+	public function top10 ()
+	{
+
+		$list_anime = $this->VideoModel->get_popular($this->branch,10);
+
+
+		
+		$ads = $this->VideoModel->get_path_imgads($this->branch);
+		$list_category = $this->VideoModel->get_category($this->branch);
+		$chk_act = [
+			'home' => '',
+			'subthai' => '',
+			'soundthai' => '',
+			'category' => 'active',
+		];
+
+
+		$header_data = [
+			'document_root' => $this->document_root,
+			'list_category' => $list_category,
+			'ads' => $ads,
+			'list_anime' => $list_anime,
+			'chk_act' => $chk_act,
+			'path_ads' => $this->path_ads,
+		];
+
+		$body_data = [
+			'url_loadmore' => base_url() . '/animedata_category',
+			'path_thumbnail' => $this->path_thumbnail,
+			'list_anime' => $list_anime,
 		];
 		echo view('templates/header.php', $header_data);
 		echo view('top.php', $body_data);
@@ -295,8 +329,6 @@ class Home extends BaseController
 
 	public function countView($id)
 	{
-	$this->VideoModel->countView($id);
-	
-		
+		$this->VideoModel->countView($id);
 	}
 }

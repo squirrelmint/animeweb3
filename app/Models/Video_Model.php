@@ -124,7 +124,9 @@ class Video_Model extends Model
        
         return $data;
     }
-    public function get_popular($branch_id) 
+
+
+    public function get_popular($branch_id,$limit) 
     {
 
         $sql = "SELECT
@@ -134,7 +136,7 @@ class Video_Model extends Model
             
             
             WHERE
-            `$this->table_movie`.branch_id = ? AND $this->table_movie.movie_active = '1' order by $this->table_movie.movie_view desc  limit 4
+            `$this->table_movie`.branch_id = ? AND $this->table_movie.movie_active = '1' order by $this->table_movie.movie_view desc  limit $limit
            ";
 
 

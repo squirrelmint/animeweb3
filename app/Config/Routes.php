@@ -41,6 +41,8 @@ $routes->get('all_manga', 'Home::all_manga');
 $routes->get('search/(:any)', 'Home::search/$1');
 $routes->get('category/(:num)/(:any)', 'Home::category/$1/$2');
 $routes->get('list', 'Home::list');
+$routes->get('TOP10', 'Home::top10');
+
 
 $routes->get('countview/(:num)', 'Home::countView/$1');
 

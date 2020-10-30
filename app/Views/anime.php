@@ -80,8 +80,14 @@
               <?= $data_anime['movie_ratescore'] ?>
             </div>
           </div>
-          <div class="anime-category">
-            หมวดหมู่: Action, Adventure
+          <div class="anime-category">หมวดหมู่:
+          <?php foreach ($data_anime['cate_data'] as $val) { ?>
+              <a href="<?php echo base_url().'/category/'.$val['category_id'].'/'.$val['category_name'] ?>" target="_blank">
+                <span class="cate-name"><?= $val['category_name'] ?></span>
+              </a>
+
+            <?php } ?>
+
           </div>
         </div>
       </div>

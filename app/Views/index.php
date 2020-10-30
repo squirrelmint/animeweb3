@@ -15,10 +15,17 @@
             <div class="slider-area">
               <h2 class="title-slider"><?= $val['movie_thname'] ?></h2>
               <div class="slider-rank">TOP <?= $i ?></div>
-              <div class="slider-ep">ตอนที่ 11</div>
+              <?PHP
+              foreach ($val['ep_data'] as $key => $ep_data) {
+                $key = $key;
+              }
+              $nameep = str_replace('EP', 'ตอนที่', strtoupper($val['ep_data'][$key]['NameEp']));
+              $nameepurl = str_replace(' ', '-', strtoupper($val['ep_data'][$key]['NameEp']));
+              ?>
+              <div class="slider-ep"> <?= $nameep ?></div>
 
               <div class="slider-footer">
-                <button class="slider-play" onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0')">
+                <button class="slider-play" onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','<?= $key ?>','<?= $nameepurl ?>')">
                   <i class="fas fa-play"></i> เล่น
                 </button>
               </div>
@@ -108,7 +115,8 @@
                 <div class="title-in">
                   <h2>
                     <a onclick="goView('<?= $val['movie_id'] ?>','<?= urldecode($val['movie_thname']) ?>','0','<?= str_replace(' ', '-', $val['ep_data'][0]['NameEp']) ?>')" tabindex="-1" alt="<?$val['movie_thname'])?>" title="<?$val['movie_thname'])?>">
-                      <?$val['movie_thname'])?></a>
+                      <?= $val['movie_thname'] ?>
+                    </a>
                   </h2>
                 </div>
               </li>
@@ -194,7 +202,7 @@
       var track_click = 2; //track user click on "load more" button, righ now it is 0 click
       var total_pages = '<?= $pagination['total_page'] ?>';
 
-      if (track_click == total_pages) {
+      if (track_click >= total_pages) {
         $("#anime-loadmore").hide(0);
       }
 
