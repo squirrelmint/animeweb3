@@ -21,7 +21,7 @@ class Home extends BaseController
 		$this->session = \Config\Services::session();
 		$this->VideoModel = new Video_Model();
 		$this->branch = 1;
-
+		$this->mo_req = [1, 2, 10, 100];
 		// Directory
 		$this->path_ads = $this->backURL . 'banners/';
 		$this->path_setting = $this->backURL . 'setting/';
@@ -31,7 +31,9 @@ class Home extends BaseController
 
 	public function index()
 	{
-		$popular_anime = $this->VideoModel->get_popular($this->branch,4);
+		foreach ($this->mo_req as $req) {
+			$popular_anime[] = $this->VideoModel->get_popular($this->branch, $req);
+		}
 		$slide_anime = $this->VideoModel->get_slide($this->branch);
 		$pagination = $this->VideoModel->get_list_video($this->branch);
 		foreach ($pagination['list'] as $val) {
@@ -40,7 +42,7 @@ class Home extends BaseController
 		$ads = $this->VideoModel->get_path_imgads($this->branch);
 		$list_category = $this->VideoModel->get_category($this->branch);
 		$date = get_date($slide_anime[0]['movie_create']);
-		// echo '<pre>' . print_r($slide_anime, true) . '</pre>';
+		// echo '<pre>' . print_r($popular_anime, true) . '</pre>';
 		// die;
 		$chk_act = [
 			'home' => 'active',
@@ -270,13 +272,13 @@ class Home extends BaseController
 		echo view('templates/footer.php');
 	}
 
-	public function top10 ()
+	public function top10()
 	{
 
-		$list_anime = $this->VideoModel->get_popular($this->branch,10);
+		$list_anime = $this->VideoModel->get_top10($this->branch, 10);
 
 
-		
+
 		$ads = $this->VideoModel->get_path_imgads($this->branch);
 		$list_category = $this->VideoModel->get_category($this->branch);
 		$chk_act = [

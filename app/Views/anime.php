@@ -49,7 +49,7 @@
                   if($ep_index==$key){
                     $active = 'active';
                   }
-                  $url_nameep = urlencode(str_replace(' ', '-', $val['NameEp']))
+                  $url_nameep = urlencode(str_replace(' ', '-', $val['NameEp']));
               ?>
                 <div class="swiper-slide">
                   <a onclick="goView('<?= ($data_anime['movie_id']) ?>','<?= urldecode($url_name) ?>','<?= $key ?>','<?= $url_nameep ?>')" tabindex="-1">

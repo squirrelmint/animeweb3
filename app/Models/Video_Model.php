@@ -98,7 +98,7 @@ class Video_Model extends Model
         return $query->getResultArray();
     }
 
-    public function get_slide($branch_id) 
+    public function get_slide($branch_id)
     {
 
         $sql = "SELECT
@@ -119,14 +119,44 @@ class Video_Model extends Model
         foreach ($data as $key => $val) {
             $data[$key]['cate_data'] = $this->get_category_onanime($val['movie_id']);
             $data[$key]['ep_data'] = $this->normalizeAnimetoArray($val['movie_thmain']);
-            $data[$key]['ep_count']= count($data[$key]['ep_data']) ;
+            $data[$key]['ep_count'] = count($data[$key]['ep_data']);
         }
-       
+
         return $data;
     }
 
 
-    public function get_popular($branch_id,$limit) 
+    public function get_popular($branch_id, $req)
+    {
+
+        
+        $sql = "SELECT
+            *
+            FROM
+            $this->table_movie
+            
+            
+            WHERE
+            `$this->table_movie`.branch_id = ? AND $this->table_movie.movie_active = '1'  AND $this->table_movie.movie_id = $req
+           ";
+
+
+
+
+        $query = $this->db->query($sql, [$branch_id]);
+        $data =  $query->getRowArray();
+       
+            $data['cate_data'] = $this->get_category_onanime($data['movie_id']);
+            $data['ep_data'] = $this->normalizeAnimetoArray($data['movie_thmain']);
+            $data['ep_count'] = count($data['ep_data']);
+       
+
+        return $data;
+    }
+
+
+
+    public function get_top10($branch_id, $limit)
     {
 
         $sql = "SELECT
@@ -147,9 +177,9 @@ class Video_Model extends Model
         foreach ($data as $key => $val) {
             $data[$key]['cate_data'] = $this->get_category_onanime($val['movie_id']);
             $data[$key]['ep_data'] = $this->normalizeAnimetoArray($val['movie_thmain']);
-            $data[$key]['ep_count']= count($data[$key]['ep_data']) ;
+            $data[$key]['ep_count'] = count($data[$key]['ep_data']);
         }
-       
+
         return $data;
     }
 
@@ -186,7 +216,7 @@ class Video_Model extends Model
                 $sql_where .
                 "ORDER BY `$this->table_movie`.movie_create DESC";
         }
-        
+
         $query = $this->db->query($sql);
 
         $total = count($query->getResultArray());
@@ -406,7 +436,7 @@ class Video_Model extends Model
             $movie_view_add = 1;
         } else {
 
-            $movie_view_add = $data[0]['movie_view']+1;
+            $movie_view_add = $data[0]['movie_view'] + 1;
         }
 
 
