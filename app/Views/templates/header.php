@@ -48,6 +48,17 @@
     <a href="#">TOP 1-10</a>
     <a href="#" data-toggle="modal" data-target="#anime-contract">CONTRACT</a>
 
+    <!-- <form id="anime-formsearch">
+      <div class="input-group" id="adv-search">
+        <input id="anime-search" class="anime-search" placeholder="Search..." value="">
+        <div class="input-group-btn">
+          <div class="btn-group" role="group">
+            <button type="submit" class="anime-search-button"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+      </div>
+    </form> -->
+
     <div class="anime-social col-lg-12 h-100 text-center text-lg-right my-auto">
       <ul class="list-inline mb-0">
         <li class="list-inline-item">

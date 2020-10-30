@@ -141,10 +141,15 @@ section {
   padding-top: 20px;
 }
 
+#anime-formsearch {
+  display: flex;
+  margin: 32px 32px 10px 32px
+}
+
 .anime-search {
   min-width: 20%;
-  border-radius: 50px;
-  border: #7b7b7b solid 1px;
+  border-radius: 4px;
+  border: #ababab solid 2px;
   font-size: 16px;
   padding: 5px 15px;
   outline: none;
@@ -184,14 +189,14 @@ section {
   border-radius: 50%;
   padding: 4px 9px;
   position: absolute;
-  right: 4px;
-  top: 2px;
-  background: #00aabc;
+  left: 155px;
+  top: -32px;
+  background: transparent;
   outline: none;
 }
 
 #anime-formsearch .anime-search-button i {
-  color: #ffffff;
+  color: #ababab;
 }
 
 #anime-formsearch .dropdown.dropdown-lg .dropdown-menu .anime-search-detail #anime_category {
@@ -840,22 +845,42 @@ ul.list-anime > li div.title-in h2 a:hover {
   text-decoration: none;
 }
 
-ul.list-anime > li div.title-in .anime-score {
-  width: 80%;
-  margin: 0 auto;
+ul.list-anime > li div.title-detail {
+  bottom: 0;
+  display: block;
+  width: 100%;
+}
+
+ul.list-anime > li div.title-detail .anime-score {
+  width: fit-content;
+  float: left;
   text-align: left;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
-ul.list-anime > li div.title-in .anime-score span {
-  text-transform: uppercase;
-  color: #ffffff;
-  font-weight: normal;
-  font-size: 12px;
+ul.list-anime > li div.title-detail .anime-score i {
+  color: #00c1a6;
+  padding-right: 5px;
 }
 
-ul.list-anime > li div.title-in .anime-score span.score {
-  color: #0095ff;
-  font-size: 26px;
+ul.list-anime > li div.title-detail .anime-view {
+  width: fit-content;
+  float: right;
+  text-align: right;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+ul.list-anime > li div.title-detail .anime-view i {
+  color: #00c1a6;
+  padding-right: 5px;
 }
 
 #anime-top h1.anime-title-top {
@@ -978,10 +1003,6 @@ ul.list-anime > li div.title-in .anime-score span.score {
     padding-bottom: 10px;
   }
 
-  ul.list-anime > li div.title-in .anime-score span.score {
-    font-size: 22px;
-  }
-
   ul.list-anime > li div.title-in h2 {
     font-size: 16px;
   }
@@ -999,16 +1020,12 @@ ul.list-anime > li div.title-in .anime-score span.score {
 @media (max-width: 320px) {
 
   ul.list-anime > li .anime-box {
-    width: 146px;
+    width: 100%;
     height: 206px;
   }
 
   ul.list-anime > li div.title-in {
     padding-bottom: 10px;
-  }
-
-  ul.list-anime > li div.title-in .anime-score span.score {
-    font-size: 20px;
   }
 
   ul.list-anime > li div.title-in h2 {

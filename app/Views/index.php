@@ -95,6 +95,10 @@
                   <a onclick="goView('261','Kakushigoto-%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A5%E0%B8%B1%E0%B8%9A%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%9E%E0%B9%88%E0%B8%AD','0')" tabindex="-1" alt="Kakushigoto ความลับของคุณพ่อ" title="Kakushigoto ความลับของคุณพ่อ">Kakushigoto ความลับของคุณพ่อ</a>
                 </h2>
               </div>
+              <div class="title-detail">
+                <span class="anime-score"><i class="fas fa-star"></i> 8</span>
+                <span class="anime-view"><i class="fas fa-eye"></i> 999k</span>
+              </div>
             </li>
             <li>
               <div class="anime-box">
@@ -106,6 +110,10 @@
                 <h2>
                   <a onclick="goView('256','Dr.Stone-%E0%B8%94%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B9%82%E0%B8%95%E0%B8%99','0')" tabindex="-1" alt="Dr.Stone ด็อกเตอร์สโตน" title="Dr.Stone ด็อกเตอร์สโตน">Dr.Stone ด็อกเตอร์สโตน</a>
                 </h2>
+              </div>
+              <div class="title-detail">
+                <span class="anime-score"><i class="fas fa-star"></i> 8</span>
+                <span class="anime-view"><i class="fas fa-eye"></i> 999k</span>
               </div>
             </li>
             <li>
@@ -119,6 +127,10 @@
                   <a onclick="goView('1','Detective-Conan-%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B7%E0%B8%9A%E0%B8%88%E0%B8%B4%E0%B9%8B%E0%B8%A7-%E0%B9%82%E0%B8%84%E0%B8%99%E0%B8%B1%E0%B8%99-%E0%B8%9B%E0%B8%B5-1-16','0')" tabindex="-1" alt="Detective Conan ยอดนักสืบจิ๋ว โคนัน ปี 1-16" title="Detective Conan ยอดนักสืบจิ๋ว โคนัน ปี 1-16">Detective Conan ยอดนักสืบจิ๋ว โคนัน ปี 1-16</a>
                 </h2>
               </div>
+              <div class="title-detail">
+                <span class="anime-score"><i class="fas fa-star"></i> 8</span>
+                <span class="anime-view"><i class="fas fa-eye"></i> 999k</span>
+              </div>
             </li>
             <li>
               <div class="anime-box">
@@ -130,6 +142,10 @@
                 <h2>
                   <a onclick="goView('257','Kuroko-no-Basket-2nd-Season-%E0%B8%84%E0%B8%B8%E0%B9%82%E0%B8%A3%E0%B9%82%E0%B8%81%E0%B8%B0-%E0%B9%82%E0%B8%99%E0%B8%B0-%E0%B8%9A%E0%B8%B2%E0%B8%AA%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95-%E0%B8%A0%E0%B8%B2%E0%B8%842','0')" tabindex="-1" alt="Kuroko no Basket 2nd Season คุโรโกะ โนะ บาสเก็ต ภาค2" title="Kuroko no Basket 2nd Season คุโรโกะ โนะ บาสเก็ต ภาค2">Kuroko no Basket 2nd Season คุโรโกะ โนะ บาสเก็ต ภาค2</a>
                 </h2>
+              </div>
+              <div class="title-detail">
+                <span class="anime-score"><i class="fas fa-star"></i> 8</span>
+                <span class="anime-view"><i class="fas fa-eye"></i> 999k</span>
               </div>
             </li>
           </ul>
@@ -162,6 +178,10 @@
                   <h2>
                     <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0')" tabindex="-1" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>"><?= $val['movie_thname'] ?></a>
                   </h2>
+                </div>
+                <div class="title-detail">
+                  <span class="anime-score"><i class="fas fa-star"></i> 8</span>
+                  <span class="anime-view"><i class="fas fa-eye"></i> 999k</span>
                 </div>
               </li>
             <?php  } ?>
