@@ -41,13 +41,15 @@
     <a class="navbar-brand" href="#">
       <img class="logo" src="<?= base_url().'/public/logo/Logo-Anime-8k-1.png' ?> ">
     </a>
+  
+
     <div id="mainSidenav">
-      <a href="#">HOME</a>
-      <a href="#">ANIME LIST</a>
+     <a href="<?php echo base_url() ?>">HOME</a>
+    <a href="<?php echo base_url().'/all_manga/' ?>">ANIME LIST</a>
       <a href="#" onclick="openCate()">CATEGORY</a>
       <a href="#">SUB-THAI</a>
       <a href="#">SOUND-THAI</a>
-      <a href="#">TOP 1-10</a>
+      <a href="<?php echo base_url().'/TOP10/' ?>">TOP 1-10</a>
       <a href="#" data-toggle="modal" data-target="#anime-contract">CONTRACT</a>
 
       <form id="anime-formsearch">
@@ -154,86 +156,39 @@
   </div>
 
   <script type="text/javascript">
-    $(function(){
-        $("#anime-formcontract").on("submit",function(){
-            var form = $(this)[0];
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }3
-            form.classList.add('was-validated');         
-        });     
+    $(function() {
+      $(".anime-formcontract").on("submit", function() {
+        var form = $(this)[0];
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        3
+        form.classList.add('was-validated');
+      });
     });
- 
+  </script>
+  <script>
     $(document).ready(function() {
-      $("#ads_con_email_alt").hide();
-      $('#anime-formsearch').submit(function(e) {
-        goSearch();
-        return false; //<---- Add this line
-      });
+          $("#ads_con_email_alt").hide();
+          $('#anime-formsearch').submit(function(e) {
+            goSearch();
+            return false; //<---- Add this line
+          });
 
-      function goSearch() {
+          function goSearch() {
 
-        var animesearch = $.trim($("#anime-search").val())
+            var animesearch = $.trim($("#anime-search").val())
 
-        if (animesearch) {
-          window.location.href = "/search/" + $("#anime-search").val();
-        } else {
-          window.location.href = "<?= base_url() ?>";
-        }
+            if (animesearch) {
+              window.location.href = "/search/" + $("#anime-search").val();
+            } else {
+              window.location.href = "<?= base_url() ?>";
+            }
 
-      }
-      $('#anime-formcontract').submit(function(e) {
-
-        // gocontract();
-        return false; //<---- Add this line
-      });
-
-      $("#ads_con_name_alt").hide();
-      $("#ads_con_email_alt").hide();
-      $("#ads_con_line_alt").hide();
-      $("#ads_con_tel_alt").hide();
-      $("#ads_con_all_alt").hide();
-
-      function gocontract() {
-
-        var ads_con_name = $.trim($("#ads_con_name").val())
-        var ads_con_email = $.trim($("#ads_con_email").val())
-        var ads_con_line = $.trim($("#ads_con_line").val())
-        var ads_con_tel = $.trim($("#ads_con_tel").val())
-        if (!ads_con_name || !ads_con_email || !ads_con_line || !ads_con_tel) {
-          if (!ads_con_name) {
-            $("#ads_con_name_alt").show();
-            $("#ads_con_all_alt").show();
-          } else {
-            $("#ads_con_name_alt").hide();
           }
-
-          if (!ads_con_email) {
-            $("#ads_con_email_alt").show();
-            $("#ads_con_all_alt").show();
-          } else {
-            $("#ads_con_email_alt").hide();
-          }
-
-          if (!ads_con_line) {
-            $("#ads_con_line_alt").show();
-            $("#ads_con_all_alt").show();
-          } else {
-            $("#ads_con_line_alt").hide();
-          }
-
-          if (!ads_con_tel) {
-            $("#ads_con_tel_alt").show();
-            $("#ads_con_all_alt").show();
-          } else if (count(ads_con_tel) != 10) {
-            alert('55555')
-          } else {
-            $("#ads_con_tel_alt").hide();
-          }
-        }
-      }
     });
+
   </script>
 
   <div id="anime-main">

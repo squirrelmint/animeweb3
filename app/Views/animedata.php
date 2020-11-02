@@ -15,13 +15,13 @@ foreach ($list_anime as $val) {
                 $url_name = urlencode(str_replace(' ','-',$val['movie_thname']));
                 ?>
 
-                <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0')">
+                <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0','<?= str_replace(' ','-' ,$val['ep_data'][0]['NameEp']) ?>')">
                   <img src="<?= $movie_picture ?>">
                 </a>
               </div>
               <div class="title-in">
                 <h2>
-                  <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0')" tabindex="-1"><?= $val['movie_thname'] ?></a>
+                  <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0','<?= str_replace(' ','-' ,$val['ep_data'][0]['NameEp']) ?>')" tabindex="-1"><?= $val['movie_thname'] ?></a>
                 </h2>
               </div>
               <div class="title-detail">

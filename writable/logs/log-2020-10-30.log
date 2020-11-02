@@ -1,0 +1,148 @@
+CRITICAL - 2020-10-30 00:59:11 --> Undefined index: epName
+#0 C:\xampp\htdocs\animeweb3\app\Views\index.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 23, Array)
+#1 C:\xampp\htdocs\animeweb3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\animeweb3\system\Common.php(1071): CodeIgniter\View\View->render('index.php', Array, true)
+#3 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(73): view('index.php', Array)
+#4 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-30 01:42:23 --> Too few arguments to function App\Controllers\Home::top10(), 0 passed in C:\xampp\htdocs\animeweb3\system\CodeIgniter.php on line 910 and exactly 2 expected
+#0 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->top10()
+#1 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-30 02:33:30 --> Undefined index: list
+#0 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(279): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 279, Array)
+#1 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->top10()
+#2 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-30 02:34:59 --> Undefined variable: pagination
+#0 C:\xampp\htdocs\animeweb3\app\Views\top.php(99): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 99, Array)
+#1 C:\xampp\htdocs\animeweb3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\animeweb3\system\Common.php(1071): CodeIgniter\View\View->render('top.php', Array, true)
+#3 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(305): view('top.php', Array)
+#4 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->top10()
+#5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-30 02:37:16 --> Undefined variable: pagination
+#0 C:\xampp\htdocs\animeweb3\app\Views\top.php(99): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 99, Array)
+#1 C:\xampp\htdocs\animeweb3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\animeweb3\system\Common.php(1071): CodeIgniter\View\View->render('top.php', Array, true)
+#3 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(305): view('top.php', Array)
+#4 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->top10()
+#5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-30 05:16:00 --> syntax error, unexpected ')', expecting ';' or ','
+#0 C:\xampp\htdocs\animeweb3\system\Common.php(1071): CodeIgniter\View\View->render('index.php', Array, true)
+#1 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(73): view('index.php', Array)
+#2 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-10-30 06:24:14 --> syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\xampp\htdocs\animeweb3\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('/')
+#1 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(785): CodeIgniter\Router\Router->handle('/')
+#2 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-30 06:28:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 8
+#0 C:\xampp\htdocs\animeweb3\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\animeweb3\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\animeweb3\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\animeweb3\app\Models\Video_Model.php(151): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...', Array)
+#4 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(36): App\Models\Video_Model->get_popular(1, Array)
+#5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-10-30 06:34:35 --> syntax error, unexpected ')', expecting ';' or ','
+#0 C:\xampp\htdocs\animeweb3\system\Common.php(1071): CodeIgniter\View\View->render('index.php', Array, true)
+#1 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(78): view('index.php', Array)
+#2 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-10-30 06:35:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where in '10'' at line 8
+#0 C:\xampp\htdocs\animeweb3\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\animeweb3\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\animeweb3\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\animeweb3\app\Models\Video_Model.php(158): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...', Array)
+#4 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(36): App\Models\Video_Model->get_popular(1, Array)
+#5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-10-30 06:36:47 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where in 1,2' at line 8
+#0 C:\xampp\htdocs\animeweb3\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\animeweb3\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\animeweb3\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\animeweb3\app\Models\Video_Model.php(158): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...', Array)
+#4 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(36): App\Models\Video_Model->get_popular(1, Array)
+#5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-10-30 06:36:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where in '1','2'' at line 8
+#0 C:\xampp\htdocs\animeweb3\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\animeweb3\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\animeweb3\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\animeweb3\app\Models\Video_Model.php(158): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...', Array)
+#4 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(36): App\Models\Video_Model->get_popular(1, Array)
+#5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-10-30 06:37:04 --> syntax error, unexpected ')'
+#0 C:\xampp\htdocs\animeweb3\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\animeweb3\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Vide...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Vide...')
+#3 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(22): spl_autoload_call('App\\Models\\Vide...')
+#4 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-30 06:38:13 --> Undefined index: movie_picture
+#0 C:\xampp\htdocs\animeweb3\app\Views\index.php(99): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 99, Array)
+#1 C:\xampp\htdocs\animeweb3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\animeweb3\system\Common.php(1071): CodeIgniter\View\View->render('index.php', Array, true)
+#3 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(81): view('index.php', Array)
+#4 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-30 06:41:35 --> Undefined index: movie_picture
+#0 C:\xampp\htdocs\animeweb3\app\Views\index.php(99): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 99, Array)
+#1 C:\xampp\htdocs\animeweb3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\animeweb3\system\Common.php(1071): CodeIgniter\View\View->render('index.php', Array, true)
+#3 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(81): view('index.php', Array)
+#4 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-30 06:43:43 --> Illegal string offset 'movie_id'
+#0 C:\xampp\htdocs\animeweb3\app\Models\Video_Model.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 149, Array)
+#1 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(36): App\Models\Video_Model->get_popular(1, 1)
+#2 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}

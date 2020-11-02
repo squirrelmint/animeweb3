@@ -6,6 +6,7 @@
             <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2020. All Rights Reserved.</p>
           </div>
         </div>
+        
       </div>
     </footer>
   </div>
@@ -54,7 +55,7 @@
     });
 
     function goView(id, name , ep) {
-      window.location.href = "/anime/" + id + '/' + name + '/' + ep;
+      window.location.href = "/anime/" + id + '/' + name + '/' + ep + '/' + nameep;
     }
 
     function goCate(id, name) {
@@ -96,7 +97,7 @@
       if (mobilemedia.matches) {
         document.getElementById("mySidenav").style.width = "100%";
       }
-      document.body.style.overflow = 'hidden'
+      // document.body.style.overflow = 'hidden'
       $('#mainSidenav').html(mainSide);
       // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     }

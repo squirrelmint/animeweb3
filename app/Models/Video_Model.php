@@ -98,7 +98,7 @@ class Video_Model extends Model
         return $query->getResultArray();
     }
 
-    public function get_slide($branch_id) 
+    public function get_slide($branch_id)
     {
 
         $sql = "SELECT
@@ -119,9 +119,67 @@ class Video_Model extends Model
         foreach ($data as $key => $val) {
             $data[$key]['cate_data'] = $this->get_category_onanime($val['movie_id']);
             $data[$key]['ep_data'] = $this->normalizeAnimetoArray($val['movie_thmain']);
-            $data[$key]['ep_count']= count($data[$key]['ep_data']) ;
+            $data[$key]['ep_count'] = count($data[$key]['ep_data']);
         }
+
+        return $data;
+    }
+
+
+    public function get_popular($branch_id, $req)
+    {
+
+        
+        $sql = "SELECT
+            *
+            FROM
+            $this->table_movie
+            
+            
+            WHERE
+            `$this->table_movie`.branch_id = ? AND $this->table_movie.movie_active = '1'  AND $this->table_movie.movie_id = $req
+           ";
+
+
+
+
+        $query = $this->db->query($sql, [$branch_id]);
+        $data =  $query->getRowArray();
        
+            $data['cate_data'] = $this->get_category_onanime($data['movie_id']);
+            $data['ep_data'] = $this->normalizeAnimetoArray($data['movie_thmain']);
+            $data['ep_count'] = count($data['ep_data']);
+       
+
+        return $data;
+    }
+
+
+
+    public function get_top10($branch_id, $limit)
+    {
+
+        $sql = "SELECT
+            *
+            FROM
+            $this->table_movie
+            
+            
+            WHERE
+            `$this->table_movie`.branch_id = ? AND $this->table_movie.movie_active = '1' order by $this->table_movie.movie_view desc  limit $limit
+           ";
+
+
+
+
+        $query = $this->db->query($sql, [$branch_id]);
+        $data =  $query->getResultArray();
+        foreach ($data as $key => $val) {
+            $data[$key]['cate_data'] = $this->get_category_onanime($val['movie_id']);
+            $data[$key]['ep_data'] = $this->normalizeAnimetoArray($val['movie_thmain']);
+            $data[$key]['ep_count'] = count($data[$key]['ep_data']);
+        }
+
         return $data;
     }
 
@@ -158,6 +216,7 @@ class Video_Model extends Model
                 $sql_where .
                 "ORDER BY `$this->table_movie`.movie_create DESC";
         }
+
         $query = $this->db->query($sql);
 
         $total = count($query->getResultArray());
@@ -212,7 +271,7 @@ class Video_Model extends Model
         return $query->getResultArray();
     }
 
-    // Get video_movie
+
     public function get_video_data($id)
     {
 
@@ -231,7 +290,6 @@ class Video_Model extends Model
         return $query->getRowArray();
     }
 
-    // Get video_series
     public function get_anime_data($id)
     {
         $sql = "SELECT
@@ -359,33 +417,35 @@ class Video_Model extends Model
 
 
     // นับจำนวนผู้ชม
-    public function movie_view($movie_id)
+    public function countView($id)
     {
 
         $sql = "SELECT
                     `$this->table_movie`.movie_id,
+                     `$this->table_movie`.movie_thname,
                     `$this->table_movie`.movie_view
                 FROM
                     $this->table_movie
-                WHERE `$this->table_movie`.movie_id = '$movie_id' ";
+                WHERE `$this->table_movie`.movie_id = '$id' ";
 
         $query = $this->db->query($sql);
         $data = $query->getResultArray();
 
-        if ($data[0]['movie_view'] == 0 && empty($data[0]['movie_view'])) {
+        if ($data[0]['movie_view'] == 0 || empty($data[0]['movie_view'])) {
 
-            $movie_view = 1;
+            $movie_view_add = 1;
         } else {
 
-            $movie_view = $data[0]['movie_view']++;
+            $movie_view_add = $data[0]['movie_view'] + 1;
         }
 
+
         $builder = $this->db->table($this->table_movie);
-        $builder->where('movie_id', $movie_id);
+        $builder->where('movie_id', $id);
         $this->db->transBegin();
 
         $dataadd =  [
-            'movie_view' =>  $movie_view,
+            'movie_view' =>  $movie_view_add,
         ];
 
 
@@ -405,7 +465,7 @@ class Video_Model extends Model
 
         }
 
-        return $movie_view;
+        return $movie_view_add;
     }
 
     //หนังที่น่สนใจ 2 
