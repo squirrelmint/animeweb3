@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CRITICAL - 2020-11-01 23:45:26 --> Undefined variable: val
 #0 C:\xampp\htdocs\animeweb3\app\Views\anime.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 39, Array)
 #1 C:\xampp\htdocs\animeweb3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -7,4 +8,85 @@ CRITICAL - 2020-11-01 23:45:26 --> Undefined variable: val
 #5 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+=======
+CRITICAL - 2020-11-01 23:50:39 --> Array to string conversion
+#0 C:\xampp\htdocs\anime\web3\app\Views\templates\footer.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 67, Array)
+#1 C:\xampp\htdocs\anime\web3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\anime\web3\system\Common.php(1071): CodeIgniter\View\View->render('templates/foote...', Array, true)
+#3 C:\xampp\htdocs\anime\web3\app\Controllers\Home.php(72): view('templates/foote...')
+#4 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\anime\web3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-01 23:50:44 --> Array to string conversion
+#0 C:\xampp\htdocs\anime\web3\app\Views\templates\footer.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 67, Array)
+#1 C:\xampp\htdocs\anime\web3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\anime\web3\system\Common.php(1071): CodeIgniter\View\View->render('templates/foote...', Array, true)
+#3 C:\xampp\htdocs\anime\web3\app\Controllers\Home.php(72): view('templates/foote...')
+#4 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\anime\web3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-01 23:52:10 --> Array to string conversion
+#0 C:\xampp\htdocs\anime\web3\app\Views\templates\footer.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 67, Array)
+#1 C:\xampp\htdocs\anime\web3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\anime\web3\system\Common.php(1071): CodeIgniter\View\View->render('templates/foote...', Array, true)
+#3 C:\xampp\htdocs\anime\web3\app\Controllers\Home.php(72): view('templates/foote...')
+#4 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\anime\web3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-01 23:52:20 --> Array to string conversion
+#0 C:\xampp\htdocs\anime\web3\app\Views\templates\footer.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 67, Array)
+#1 C:\xampp\htdocs\anime\web3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\anime\web3\system\Common.php(1071): CodeIgniter\View\View->render('templates/foote...', Array, true)
+#3 C:\xampp\htdocs\anime\web3\app\Controllers\Home.php(72): view('templates/foote...')
+#4 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\anime\web3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-01 23:52:52 --> Array to string conversion
+#0 C:\xampp\htdocs\anime\web3\app\Views\templates\footer.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 67, Array)
+#1 C:\xampp\htdocs\anime\web3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\anime\web3\system\Common.php(1071): CodeIgniter\View\View->render('templates/foote...', Array, true)
+#3 C:\xampp\htdocs\anime\web3\app\Controllers\Home.php(72): view('templates/foote...')
+#4 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\anime\web3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-01 23:52:59 --> Array to string conversion
+#0 C:\xampp\htdocs\anime\web3\app\Views\templates\footer.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 67, Array)
+#1 C:\xampp\htdocs\anime\web3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\anime\web3\system\Common.php(1071): CodeIgniter\View\View->render('templates/foote...', Array, true)
+#3 C:\xampp\htdocs\anime\web3\app\Controllers\Home.php(72): view('templates/foote...')
+#4 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\anime\web3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-01 23:53:02 --> Array to string conversion
+#0 C:\xampp\htdocs\anime\web3\app\Views\templates\footer.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 67, Array)
+#1 C:\xampp\htdocs\anime\web3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\anime\web3\system\Common.php(1071): CodeIgniter\View\View->render('templates/foote...', Array, true)
+#3 C:\xampp\htdocs\anime\web3\app\Controllers\Home.php(72): view('templates/foote...')
+#4 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\anime\web3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-01 23:54:13 --> Array to string conversion
+#0 C:\xampp\htdocs\anime\web3\app\Views\templates\footer.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 67, Array)
+#1 C:\xampp\htdocs\anime\web3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\anime\web3\system\Common.php(1071): CodeIgniter\View\View->render('templates/foote...', Array, true)
+#3 C:\xampp\htdocs\anime\web3\app\Controllers\Home.php(72): view('templates/foote...')
+#4 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\anime\web3\index.php(45): CodeIgniter\CodeIgniter->run()
+>>>>>>> 72bdc0b01c65defc5ea73c18dae5a5827f9c45be
 #8 {main}

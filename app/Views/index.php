@@ -119,6 +119,10 @@
                     </a>
                   </h2>
                 </div>
+                <div class="title-detail">
+                <span class="anime-score"><i class="fas fa-star"></i> 8</span>
+                <span class="anime-view"><i class="fas fa-eye"></i> 999k</span>
+              </div>
               </li>
             <?php
             } ?>
@@ -155,6 +159,10 @@
                   <h2>
                     <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0')" tabindex="-1" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>"><?= $val['movie_thname'] ?></a>
                   </h2>
+                </div>
+                <div class="title-detail">
+                  <span class="anime-score"><i class="fas fa-star"></i> 8</span>
+                  <span class="anime-view"><i class="fas fa-eye"></i> 999k</span>
                 </div>
               </li>
             <?php  } ?>

@@ -24,5 +24,9 @@ foreach ($list_anime as $val) {
                   <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0','<?= str_replace(' ','-' ,$val['ep_data'][0]['NameEp']) ?>')" tabindex="-1"><?= $val['movie_thname'] ?></a>
                 </h2>
               </div>
+              <div class="title-detail">
+                <span class="anime-score"><i class="fas fa-star"></i> 8</span>
+                <span class="anime-view"><i class="fas fa-eye"></i> 999k</span>
+              </div>
             </li>
           <?php  } ?>

@@ -41,31 +41,47 @@
     <a class="navbar-brand" href="#">
       <img class="logo" src="<?= base_url().'/public/logo/Logo-Anime-8k-1.png' ?> ">
     </a>
-    <a href="<?php echo base_url() ?>">HOME</a>
-    <a href="<?php echo base_url().'/all_manga/' ?>">ANIME LIST</a>
-    <a href="#">SUB-THAI</a>
-    <a href="#">SOUND-THAI</a>
-    <a href="<?php echo base_url().'/TOP10/' ?>">TOP 1-10</a>
-    <a href="#" data-toggle="modal" data-target="#anime-contract">CONTRACT</a>
+  
 
-    <div class="anime-social col-lg-12 h-100 text-center text-lg-right my-auto">
-      <ul class="list-inline mb-0">
-        <li class="list-inline-item">
-          <a href="#" class="btn-social">
-            <i class="fab fa-facebook fa-2x fa-fw"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#" class="btn-social">
-            <i class="fab fa-twitter-square fa-2x fa-fw"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#" class="btn-social">
-            <i class="fab fa-instagram fa-2x fa-fw"></i>
-          </a>
-        </li>
-      </ul>
+    <div id="mainSidenav">
+     <a href="<?php echo base_url() ?>">HOME</a>
+    <a href="<?php echo base_url().'/all_manga/' ?>">ANIME LIST</a>
+      <a href="#" onclick="openCate()">CATEGORY</a>
+      <a href="#">SUB-THAI</a>
+      <a href="#">SOUND-THAI</a>
+      <a href="<?php echo base_url().'/TOP10/' ?>">TOP 1-10</a>
+      <a href="#" data-toggle="modal" data-target="#anime-contract">CONTRACT</a>
+
+      <form id="anime-formsearch">
+        <div class="input-group" id="adv-search">
+          <input id="anime-search" class="anime-search" placeholder="Search..." value="">
+          <div class="input-group-btn">
+            <div class="btn-group" role="group">
+              <button type="submit" class="anime-search-button"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="anime-social col-lg-12 h-100 text-center text-lg-right my-auto">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item">
+            <a href="#" class="btn-social">
+              <i class="fab fa-facebook fa-2x fa-fw"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="btn-social">
+              <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="btn-social">
+              <i class="fab fa-instagram fa-2x fa-fw"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 

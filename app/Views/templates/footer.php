@@ -9,79 +9,101 @@
         
       </div>
     </footer>
-    </div>
+  </div>
 
-    <script>
-      $(document).ready(function() {
+  <script>
 
-        var mySwiper = new Swiper('#HomeSlide', {
-          loop: true,
-          speed: 800,
-          spaceBetween: 100,
-          effect: 'fade',
+    const mainSide = $('#mainSidenav').html();
+    const mobilemedia = window.matchMedia("(max-width: 768px)");
+    const desktopmedia = window.matchMedia("(min-width: 769px)");
 
-          // Slide auto play
-          autoplay: {
-            delay: 5000,
-          },
+    function myDesktopSidenav(x) {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    myFunction(desktopmedia); // Call listener function at run time
+    desktopmedia.addListener(myDesktopSidenav); // Attach listener function on state changes
+    
+    $(document).ready(function() {
 
-          // Navigation arrows
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        })
+      var mySwiper = new Swiper('#HomeSlide', {
+        loop: true,
+        speed: 800,
+        spaceBetween: 100,
+        effect: 'fade',
 
+        // Slide auto play
+        autoplay: {
+          delay: 5000,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
       });
 
-      function goView(id, name, ep, nameep) {
-        if(!nameep){
-        nameep == ' '
-      }
-        countView(id);
-
-        window.location.href = "/anime/" + id + '/' + name + '/' + ep + '/' + nameep;
-
-
+      if (desktopmedia.matches) {
+        document.getElementById("mySidenav").style.width = "250px";
       }
 
-      function countView(id) {
-        // alert(id);
-        var base_url = '<?= base_url() ?>';
-        $.ajax({
+    });
 
-          url: base_url + "/countview/" + id,
-          method: "GET",
+    function goView(id, name , ep) {
+      window.location.href = "/anime/" + id + '/' + name + '/' + ep + '/' + nameep;
+    }
 
-          async: true,
+    function goCate(id, name) {
+      window.location.href = "/category/" + id + '/' + name ;
+    }
+    /* Set the width of the side navigation to 0 */
+    /* Set the width of the side navigation to 250px */
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+      document.body.style.overflow = 'hidden'
+    }
 
-          success: function(response) {
-
-            console.log(response); // server response
-
-          }
-
-
-        });
-
-      }
-
-      function goCate(id, name) {
-
-        window.location.href = "/category/" + id + '/' + name;
-      }
-      /* Set the width of the side navigation to 0 */
-      /* Set the width of the side navigation to 250px */
-      function openNav() {
+    function openCate() {
+      document.getElementById("mySidenav").style.width = "250px";
+      if (mobilemedia.matches) {
         document.getElementById("mySidenav").style.width = "100%";
-        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
       }
+      // document.body.style.overflow = 'hidden'
 
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
+      var html = '';
+
+      html += '<a href="javascript:void(0)" onclick="closeCate()"><i class="fas fa-arrow-left"></i> BACK</a>';
+
+      var cate = JSON.parse('<?=json_encode($list_category)?>');
+
+      cate.forEach(function(object) {
+        html += '<a href="#">'+object.category_name+'</a>';
+      });
+
+      $('#mainSidenav').html(html);
+      // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeCate() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("mySidenav").style.width = "250px";
+      if (mobilemedia.matches) {
+        document.getElementById("mySidenav").style.width = "100%";
       }
-    </script>
+      // document.body.style.overflow = 'hidden'
+      $('#mainSidenav').html(mainSide);
+      // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
 
-    </body>
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.body.style.overflow = 'auto'
+      $('#mainSidenav').html(mainSide);
+    }
+    
+  </script>
 
-    </html>
+  </body>
+
+  </html>
