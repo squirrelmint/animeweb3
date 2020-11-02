@@ -18,14 +18,10 @@
     const desktopmedia = window.matchMedia("(min-width: 769px)");
 
     function myDesktopSidenav(x) {
-      if (desktopmedia.matches) {
-        document.getElementById("mySidenav").style.width = "250px";
-      }else{
-        document.getElementById("mySidenav").style.width = "0px";
-      }
+      document.getElementById("mySidenav").style.width = "250px";
     }
-
-    myDesktopSidenav(desktopmedia); // Call listener function at run time
+    
+    myFunction(desktopmedia); // Call listener function at run time
     desktopmedia.addListener(myDesktopSidenav); // Attach listener function on state changes
     
     $(document).ready(function() {
@@ -54,9 +50,37 @@
 
     });
 
-    function goView(id, name , ep) {
-      window.location.href = "/anime/" + id + '/' + name + '/' + ep + '/' + nameep;
-    }
+    function goView(id, name, ep, nameep) {
+        if(!nameep){
+        nameep == ' '
+      }
+        countView(id);
+
+        window.location.href = "/anime/" + id + '/' + name + '/' + ep + '/' + nameep;
+
+
+      }
+
+      function countView(id) {
+        // alert(id);
+        var base_url = '<?= base_url() ?>';
+        $.ajax({
+
+          url: base_url + "/countview/" + id,
+          method: "GET",
+
+          async: true,
+
+          success: function(response) {
+
+            console.log(response); // server response
+
+          }
+
+
+        });
+
+      }
 
     function goCate(id, name) {
       window.location.href = "/category/" + id + '/' + name ;
@@ -73,8 +97,6 @@
       if (mobilemedia.matches) {
         document.getElementById("mySidenav").style.width = "100%";
       }
-      
-      document.getElementById("mySidenav").style.overflowY = 'auto'
       document.body.style.overflow = 'hidden'
 
       var html = '';
@@ -97,7 +119,7 @@
       if (mobilemedia.matches) {
         document.getElementById("mySidenav").style.width = "100%";
       }
-      // document.body.style.overflow = 'hidden'
+      document.body.style.overflow = 'hidden'
       $('#mainSidenav').html(mainSide);
       // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     }
