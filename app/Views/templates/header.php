@@ -54,7 +54,14 @@
 
       <form id="anime-formsearch">
         <div class="input-group" id="adv-search">
-          <input id="anime-search" class="anime-search" placeholder="Search..." value="">
+        <?php
+            if (!empty($keyword)) {
+              $value = $keyword;
+            } else {
+              $value = '';
+            }
+            ?>
+          <input id="anime-search" class="anime-search" placeholder="Search..." value="<?=  $value ?>">
           <div class="input-group-btn">
             <div class="btn-group" role="group">
               <button type="submit" class="anime-search-button"><i class="fas fa-search"></i></button>

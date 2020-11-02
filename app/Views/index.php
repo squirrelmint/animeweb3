@@ -168,8 +168,15 @@
                   </h2>
                 </div>
                 <div class="title-detail">
-                  <span class="anime-score"><i class="fas fa-star"></i> 8</span>
-                  <span class="anime-view"><i class="fas fa-eye"></i> 999k</span>
+                <span class="anime-score"><i class="fas fa-star"></i> <?= $val['movie_ratescore'] ?></span>
+                <span class="anime-view"><i class="fas fa-eye"></i>  <?php if (!($val['movie_view'])) {
+                      $view = 0;
+                    } else if (strlen($val['movie_view']) >= 5) {
+                      $view =  substr($val['movie_view'], 0, -3) . 'k';
+                    } else {
+                      $view = $val['movie_view'];
+                    }
+                    echo $view ?></span>
                 </div>
               </li>
             <?php  } ?>

@@ -98,3 +98,10 @@ CRITICAL - 2020-11-02 02:56:57 --> file_get_contents(): read of 8192 bytes faile
 =======
 >>>>>>> 86d92132b31702f2ffc279d4bc380a6ec2f3b040
 >>>>>>> baa4a429b8a4dcfbe84f6c8e384395f4289cb4e5
+CRITICAL - 2020-11-02 03:16:44 --> Undefined variable: list_anime
+#0 C:\xampp\htdocs\animeweb3\app\Controllers\Home.php(237): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 237, Array)
+#1 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(910): App\Controllers\Home->search('tests')
+#2 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
