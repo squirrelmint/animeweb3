@@ -26,7 +26,7 @@ if (substr($data_anime['movie_picture'], 0, 4) == 'http') {
 $url_name = urlencode(str_replace(' ', '-', $data_anime['movie_thname']))
 ?>
 
-<section id="anime-poster"
+<section id="anime-poster">
   <div class="anime-poster">
     <img src="<?= $movie_picture ?>">
   </div>
