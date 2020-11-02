@@ -17,10 +17,14 @@
     const desktopmedia = window.matchMedia("(min-width: 769px)");
 
     function myDesktopSidenav(x) {
-      document.getElementById("mySidenav").style.width = "250px";
+      if (desktopmedia.matches) {
+        document.getElementById("mySidenav").style.width = "250px";
+      }else{
+        document.getElementById("mySidenav").style.width = "0px";
+      }
     }
-    
-    myFunction(desktopmedia); // Call listener function at run time
+
+    myDesktopSidenav(desktopmedia); // Call listener function at run time
     desktopmedia.addListener(myDesktopSidenav); // Attach listener function on state changes
     
     $(document).ready(function() {
@@ -68,6 +72,8 @@
       if (mobilemedia.matches) {
         document.getElementById("mySidenav").style.width = "100%";
       }
+      
+      document.getElementById("mySidenav").style.overflowY = 'auto'
       document.body.style.overflow = 'hidden'
 
       var html = '';
