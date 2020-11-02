@@ -11,6 +11,9 @@
   </div>
 
   <script>
+
+    const mainSide = $('#mainSidenav').html();
+    
     $(document).ready(function() {
 
       var mySwiper = new Swiper('#HomeSlide', {
@@ -48,11 +51,40 @@
     /* Set the width of the side navigation to 250px */
     function openNav() {
       document.getElementById("mySidenav").style.width = "100%";
+      document.body.style.overflow = 'hidden'
+      // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function openCate() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("mySidenav").style.width = "250px";
+      document.body.style.overflow = 'hidden'
+
+      var html = '';
+
+      html += '<a href="javascript:void(0)" onclick="closeCate()"><i class="fas fa-arrow-left"></i> BACK</a>';
+
+      var cate = JSON.parse('<?=json_encode($list_category)?>');
+
+      cate.forEach(function(object) {
+        html += '<a href="#">'+object.category_name+'</a>';
+      });
+
+      $('#mainSidenav').html(html);
+      // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeCate() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("mySidenav").style.width = "250px";
+      document.body.style.overflow = 'hidden'
+      $('#mainSidenav').html(mainSide);
       // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     }
 
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
+      document.body.style.overflow = 'auto'
     }
     
   </script>

@@ -217,24 +217,16 @@ img.logo {
 
 @media (min-width: 321px) and (max-width: 1024px) {
   .anime-search {
-    width: 41px;
+    width: 100%;
     font-size: 14px;
-  }
-
-  .anime-search:-moz-placeholder {
-    color: transparent;
-  }
-
-  .anime-search::-webkit-input-placeholder {
-    color: transparent;
   }
 
   #anime-formsearch .anime-search-button {
     pointer-events: none;
     padding: 2px 8px;
-    right: 4px;
-    /* background-color: transparent; */
-    background-color: #fff;
+    left: -34px;
+    top: 2px;
+    background-color: transparent;
   }
 
   .anime-search:focus:-moz-placeholder  {
@@ -243,14 +235,6 @@ img.logo {
 
   .anime-search:focus::-webkit-input-placeholder {
     color: #000;
-  }
-
-  #anime-formsearch .anime-search-button i {
-    color: #00aabc;
-  }
-
-  .anime-search:focus {
-    width: 164px;
   }
 
   .anime-search:focus ~ .anime-search-button {
