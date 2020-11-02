@@ -6,6 +6,7 @@
             <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2020. All Rights Reserved.</p>
           </div>
         </div>
+        
       </div>
     </footer>
     </div>
