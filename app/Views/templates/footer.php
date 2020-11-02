@@ -122,6 +122,7 @@
       document.getElementById("mySidenav").style.width = "0";
       document.getElementById("mySidenav").style.width = "250px";
       document.body.style.overflow = 'auto';
+      document.getElementById("mySidenav").style.overflowY = 'hidden'
 
       if (mobilemedia.matches) {
         document.getElementById("mySidenav").style.width = "100%";
