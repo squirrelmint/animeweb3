@@ -13,6 +13,15 @@
   <script>
 
     const mainSide = $('#mainSidenav').html();
+    const mobilemedia = window.matchMedia("(max-width: 768px)");
+    const desktopmedia = window.matchMedia("(min-width: 769px)");
+
+    function myDesktopSidenav(x) {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    myFunction(desktopmedia); // Call listener function at run time
+    desktopmedia.addListener(myDesktopSidenav); // Attach listener function on state changes
     
     $(document).ready(function() {
 
@@ -32,19 +41,19 @@
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-      })
+      });
+
+      if (desktopmedia.matches) {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
 
     });
 
     function goView(id, name , ep) {
-    
       window.location.href = "/anime/" + id + '/' + name + '/' + ep;
     }
 
-    
-
     function goCate(id, name) {
-
       window.location.href = "/category/" + id + '/' + name ;
     }
     /* Set the width of the side navigation to 0 */
@@ -52,12 +61,13 @@
     function openNav() {
       document.getElementById("mySidenav").style.width = "100%";
       document.body.style.overflow = 'hidden'
-      // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     }
 
     function openCate() {
-      document.getElementById("mySidenav").style.width = "0";
       document.getElementById("mySidenav").style.width = "250px";
+      if (mobilemedia.matches) {
+        document.getElementById("mySidenav").style.width = "100%";
+      }
       document.body.style.overflow = 'hidden'
 
       var html = '';
@@ -77,6 +87,9 @@
     function closeCate() {
       document.getElementById("mySidenav").style.width = "0";
       document.getElementById("mySidenav").style.width = "250px";
+      if (mobilemedia.matches) {
+        document.getElementById("mySidenav").style.width = "100%";
+      }
       document.body.style.overflow = 'hidden'
       $('#mainSidenav').html(mainSide);
       // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
@@ -85,6 +98,7 @@
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
       document.body.style.overflow = 'auto'
+      $('#mainSidenav').html(mainSide);
     }
     
   </script>
