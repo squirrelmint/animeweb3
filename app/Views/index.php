@@ -137,6 +137,7 @@
               <li>
                 <div class="anime-box">
 
+
                   <?php if (substr($val['movie_picture'], 0, 4) == 'http') {
                     $movie_picture = $val['movie_picture'];
                   } else {
