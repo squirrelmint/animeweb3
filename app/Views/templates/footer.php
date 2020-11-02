@@ -111,7 +111,7 @@
       var cate = JSON.parse('<?=json_encode($list_category)?>');
 
       cate.forEach(function(object) {
-        html += '<a href="#">'+object.category_name+'</a>';
+        html += '<a onclick="goCate('+object.category_id+',\''+object.category_name+'\')">'+object.category_name+'</a>';
       });
 
       $('#mainSidenav').html(html);
