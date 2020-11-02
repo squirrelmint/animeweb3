@@ -6,6 +6,7 @@
 
 body {
   background-color: #232323;
+  color: #fff;
   font-family: 'Prompt', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -830,7 +831,8 @@ ul.list-anime > li div.title-in h2 a:hover {
 }
 
 ul.list-anime > li div.title-detail {
-  bottom: 0;
+  top: 0;
+  position: absolute;
   display: block;
   width: 100%;
 }
@@ -842,8 +844,10 @@ ul.list-anime > li div.title-detail .anime-score {
   color: #fff;
   font-size: 14px;
   font-weight: 400;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #003446;
+  border-bottom-right-radius: 5px;
+  box-shadow: 2px 2px 4px #232323;
 }
 
 ul.list-anime > li div.title-detail .anime-score i {
@@ -858,8 +862,10 @@ ul.list-anime > li div.title-detail .anime-view {
   color: #fff;
   font-size: 14px;
   font-weight: 400;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #003446;
+  border-bottom-left-radius: 5px;
+  box-shadow: 2px 2px 4px #232323;
 }
 
 ul.list-anime > li div.title-detail .anime-view i {

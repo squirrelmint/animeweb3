@@ -132,5 +132,10 @@ $url_name = urlencode(str_replace(' ', '-', $data_anime['movie_thname']))
       },
     });
 
+    
+    swiper.on('reachEnd', function () {
+      console.log('end');
+    });
+
   };
 </script>
