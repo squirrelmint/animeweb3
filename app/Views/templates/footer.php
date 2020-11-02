@@ -94,10 +94,15 @@
 
     function openCate() {
       document.getElementById("mySidenav").style.width = "250px";
+      document.body.style.overflow = 'auto';
+
       if (mobilemedia.matches) {
         document.getElementById("mySidenav").style.width = "100%";
+        document.body.style.overflow = 'hidden';
       }
-      document.body.style.overflow = 'hidden'
+      
+      document.getElementById("mySidenav").style.overflowY = 'auto'
+      
 
       var html = '';
 
@@ -116,10 +121,13 @@
     function closeCate() {
       document.getElementById("mySidenav").style.width = "0";
       document.getElementById("mySidenav").style.width = "250px";
+      document.body.style.overflow = 'auto';
+
       if (mobilemedia.matches) {
         document.getElementById("mySidenav").style.width = "100%";
+        document.body.style.overflow = 'hidden';
       }
-      document.body.style.overflow = 'hidden'
+      
       $('#mainSidenav').html(mainSide);
       // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     }

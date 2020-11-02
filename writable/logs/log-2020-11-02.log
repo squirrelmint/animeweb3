@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+CRITICAL - 2020-11-02 01:46:53 --> Unknown database 'new_variety2'
+#0 C:\xampp\htdocs\anime\web3\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\anime\web3\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\anime\web3\app\Models\Video_Model.php(146): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...', Array)
+#3 C:\xampp\htdocs\anime\web3\app\Controllers\Home.php(35): App\Models\Video_Model->get_popular(1, 1)
+#4 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\anime\web3\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\anime\web3\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-02 01:46:53 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\anime\web3\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\anime\web3\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Home), true)
+#2 C:\xampp\htdocs\anime\web3\system\Debug\Exceptions.php(298): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\anime\web3\system\Debug\Exceptions.php(171): CodeIgniter\Debug\Exceptions->render(Object(mysqli_sql_exception), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(mysqli_sql_exception))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+=======
 CRITICAL - 2020-11-02 01:55:34 --> unlink(C:\xampp\htdocs\animeweb3\writable\debugbar/debugbar_1604302660.json): No such file or directory
 #0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp...', 'C:\\xampp\\htdocs...', 106, Array)
 #1 C:\xampp\htdocs\animeweb3\system\Debug\Toolbar\Collectors\History.php(106): unlink('C:\\xampp\\htdocs...')
@@ -20,6 +43,7 @@ CRITICAL - 2020-11-02 01:55:39 --> unlink(C:\xampp\htdocs\animeweb3\writable\deb
 #7 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(287): CodeIgniter\Events\Events::trigger('pre_system')
 #8 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
 #9 {main}
+<<<<<<< HEAD
 CRITICAL - 2020-11-02 02:42:01 --> Undefined variable: val
 #0 C:\xampp\htdocs\animeweb3\app\Views\templates\footer.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
 #1 C:\xampp\htdocs\animeweb3\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -71,3 +95,6 @@ CRITICAL - 2020-11-02 02:56:57 --> file_get_contents(): read of 8192 bytes faile
 #7 C:\xampp\htdocs\animeweb3\system\CodeIgniter.php(287): CodeIgniter\Events\Events::trigger('pre_system')
 #8 C:\xampp\htdocs\animeweb3\index.php(45): CodeIgniter\CodeIgniter->run()
 #9 {main}
+=======
+>>>>>>> 86d92132b31702f2ffc279d4bc380a6ec2f3b040
+>>>>>>> baa4a429b8a4dcfbe84f6c8e384395f4289cb4e5
