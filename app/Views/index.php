@@ -108,13 +108,13 @@
             ?>
               <li>
                 <div class="anime-box">
-                  <a onclick="goView('<?= $val['movie_id'] ?>','<?= urldecode($val['movie_thname']) ?>','0','<?= str_replace(' ', '-', $val['ep_data'][0]['NameEp']) ?>')" alt="<?= $val['movie_thname']?>" title="<?=$val['movie_thname']?>">
+                  <a onclick="goView('<?= $val['movie_id'] ?>','<?= $url_name  ?>','0','<?= str_replace(' ', '-', $val['ep_data'][0]['NameEp']) ?>')" alt="<?= $val['movie_thname']?>" title="<?=$val['movie_thname']?>">
                     <img src="<?= $movie_picture ?>" alt="<?=$val['movie_thname']?>" title="<?=$val['movie_thname']?>">
                   </a>
                 </div>
                 <div class="title-in">
                   <h2>
-                    <a onclick="goView('<?= $val['movie_id'] ?>','<?= urldecode($val['movie_thname']) ?>','0','<?= str_replace(' ', '-', $val['ep_data'][0]['NameEp']) ?>')" tabindex="-1" alt="<?=$val['movie_thname']?>" title="<?=$val['movie_thname']?>">
+                    <a onclick="goView('<?= $val['movie_id'] ?>','<?= $url_name  ?>','0','<?= str_replace(' ', '-', $val['ep_data'][0]['NameEp']) ?>')" tabindex="-1" alt="<?=$val['movie_thname']?>" title="<?=$val['movie_thname']?>">
                       <?= $val['movie_thname'] ?>
                     </a>
                   </h2>
